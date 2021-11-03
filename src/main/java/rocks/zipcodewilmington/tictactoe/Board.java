@@ -67,12 +67,13 @@ public class Board {
                 }
             }
         }
-        if(matrix[0][2] == 'O'){
-            if (matrix[1][1]  == 'O'){
-                if(matrix[2][0] == 'O'){
+        if(matrix[0][2] == 'O') {
+            if (matrix[1][1] == 'O') {
+                if (matrix[2][0] == 'O') {
                     return true;
                 }
             }
+        }
             if(matrix[1][2] == 'O'){
                 if(matrix[2][2] == 'O'){
                     return true;
