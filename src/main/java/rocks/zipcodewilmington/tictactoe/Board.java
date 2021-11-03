@@ -46,17 +46,31 @@ public class Board {
                 }
             }
         }
+        if(matrix[1][0] == 'X'){
+            if(matrix [1][1] == 'X'){
+                if(matrix [1][2] == 'X'){
+                    return true;
+                }
+            }
+        }
+        if(matrix[2][0] == 'X'){
+            if(matrix[2][1] == 'X'){
+                if(matrix[2][2] == 'X'){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     public Boolean isInFavorOfO() {
-        if(matrix[0][0] == 'O'){
-            if (matrix[0][1]  == 'O'){
-                if(matrix[0][2] == 'O'){
+        if(matrix[0][0] == 'O'){//0
+            if (matrix[0][1]  == 'O'){// - 0
+                if(matrix[0][2] == 'O'){//--0
                     return true;
                 }
             }
-            if(matrix[1][0] == 'O'){
+            if(matrix[1][0] == 'O'){//vertical
                 if(matrix[2][0] == 'O'){
                     return true;
                 }
@@ -73,24 +87,38 @@ public class Board {
                     return true;
                 }
             }
+            if (matrix[1][2] == 'O') {
+                if (matrix[2][2] == 'O') {
+                    return true;
+                }
+            }
         }
-            if(matrix[1][2] == 'O'){
+        if(matrix[0][1] == 'O'){
+            if(matrix[1][1] == 'O'){
+                if(matrix[2][1] == 'O'){
+                    return true;
+                }
+            }
+        }
+        if(matrix[1][0] == 'O'){
+            if(matrix[1][1] == 'O'){
+                if(matrix[1][2] == 'O') {
+                    return true;
+                }
+            }
+        }
+        if(matrix [2][0] == 'O'){
+            if(matrix[2][1] == 'O'){
                 if(matrix[2][2] == 'O'){
                     return true;
                 }
             }
-            if(matrix[0][1] == 'O'){
-                if(matrix[1][1] == 'O'){
-                    if(matrix[2][1] == 'O'){
-                        return true;
-                    }
-                }
-            }
-            return false;
+        }
+        return false;
     }
 
     public Boolean isTie() {
-        return !(this.isInFavorOfX() && this.isInFavorOfO());
+        return !(this.isInFavorOfX() || this.isInFavorOfO());
     }
 
     public String getWinner() {
