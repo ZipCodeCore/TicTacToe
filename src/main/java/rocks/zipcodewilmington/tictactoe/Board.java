@@ -100,7 +100,6 @@ public class Board {
             if(this.isInFavorOfO()){
                 return "O";
             }
-        }
         return "";
     }
 
