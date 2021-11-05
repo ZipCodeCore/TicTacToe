@@ -56,14 +56,13 @@ public class Board {
               }else if(matrix[row][0] == 'X' && matrix[row][1] == 'X' && matrix[row][2] == 'X'){//diagonal win
                   isInFavorOfX = true;
 
-              }else if(matrix[row][2] == 'X' && matrix[row][1] == 'X' && matrix[row][0] == 'X'){
+              }else if(matrix[row][2] == 'X' && matrix[row][1] == 'X' && matrix[row][0] == 'X'){//diagonal win
                   isInFavorOfX =true;
 
               }
 
             }
         }
-
 
         return isInFavorOfX;
     }
@@ -101,12 +100,13 @@ public class Board {
     public Boolean isTie() {
 
 
-        return (isInFavorOfO() || isInFavorOfX());
+        return !(isInFavorOfO() || isInFavorOfX());
     }
 
     public String getWinner() {
         String winner = "";
-       if(isInFavorOfX()){
+
+        if(isInFavorOfX()){
           winner = "X";
 
        }else if(isInFavorOfO()){
