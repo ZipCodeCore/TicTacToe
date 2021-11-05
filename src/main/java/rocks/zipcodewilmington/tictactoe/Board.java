@@ -27,7 +27,7 @@ public class Board {
 
 
 
-           Ways to win
+            8 Ways to win
            row1 [0][0],[0][1],[0][2]
            row2 [1][0],[1][1],[1][2]
            row3 [2][0],[2][1],[2][2]
@@ -53,10 +53,10 @@ public class Board {
               }else if(matrix[0][col] == 'X' && matrix[1][col] == 'X' && matrix[2][col] == 'X'){//vertical win
                     isInFavorOfX =true;
 
-              }else if(matrix[row][0] == 'X' && matrix[row][1] == 'X' && matrix[row][2] == 'X'){//diagonal win
+              }else if(matrix[0][0] == 'X' && matrix[1][1] == 'X' && matrix[2][2] == 'X'){//diagonal 1 win
                   isInFavorOfX = true;
 
-              }else if(matrix[row][2] == 'X' && matrix[row][1] == 'X' && matrix[row][0] == 'X'){//diagonal win
+              }else if(matrix[0][2] == 'X' && matrix[1][1] == 'X' && matrix[2][0] == 'X'){//diagonal 2 win
                   isInFavorOfX =true;
 
               }
@@ -76,22 +76,24 @@ public class Board {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
 
-                if(matrix[row][0] == 'O' && matrix[row][1] == 'O' && matrix[row][2] == 'O'){
+                if(matrix[row][0] == 'O' && matrix[row][1] == 'O' && matrix[row][2] == 'O'){ //horizontal wins
                     isInFavorOfO = true;
 
-                }else if(matrix[0][col] == 'O' && matrix[1][col] == 'O' && matrix[2][col] == 'O'){
+                }else if(matrix[0][col] == 'O' && matrix[1][col] == 'O' && matrix[2][col] == 'O'){//vertical wins
                     isInFavorOfO =true;
 
-                }else if(matrix[row][0] == 'O' && matrix[row][1] == 'O' && matrix[row][2] == 'O'){
+                }else if(matrix[0][0] == 'O' && matrix[1][1] == 'O' && matrix[2][2] == 'O'){ //diagonal 1 win
                     isInFavorOfO = true;
 
-                }else if(matrix[row][2] == 'O' && matrix[row][1] == 'O' && matrix[row][0] == 'O'){
+                }else if(matrix[0][2] == 'O' && matrix[1][1] == 'O' && matrix[2][0] == 'O'){//diagonal 2 win
                     isInFavorOfO =true;
 
                 }
 
             }
         }
+
+
 
 
         return isInFavorOfO;
