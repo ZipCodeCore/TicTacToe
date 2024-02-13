@@ -15,6 +15,8 @@ Hey, you signed up for this. Let's not panic.
 
 Well, we need to know if a matrix (3 by 3) is a winning TicTacToe board.
 
+__When you see the word `iterate` or `iteration`, think LOOPs__
+
 To determine if a matrix represents a valid winning tic-tac-toe board, we need to check if any of the rows, columns, or diagonals contain three consecutive X's or O's.
 
 We can start by checking the rows. We would iterate through each row of the matrix and check if all three elements in the row are either X's or O's. If we find a row that contains three consecutive X's or O's, then the board is a valid winning tic-tac-toe board.
@@ -24,6 +26,8 @@ Next, we would check the columns. We would iterate through each column of the ma
 Finally, we would check the diagonals. We would check the two diagonals of the matrix to see if all three elements in the diagonal are either X's or O's. If we find a diagonal that contains three consecutive X's or O's, then the board is a valid winning tic-tac-toe board.
 
 If none of the rows, columns, or diagonals contain three consecutive X's or O's, then the board is not a valid winning tic-tac-toe board.
+
+__When you see the word `iterate` or `iteration`, think LOOPs__
 
 There a bunch of tests in here that provide examples of boards that are and are not winning boards.
 __Read the tests to help you understand.__
